@@ -1,6 +1,6 @@
 %define name hevea 
-%define version 1.09
-%define release %mkrel 3
+%define version 1.10
+%define release %mkrel 1
 
 Name: 		%{name}
 Version: 	%{version}
@@ -31,19 +31,19 @@ copyright 1995--1999 INRIA.
 %setup -q -a 1
 
 %build
-%make LIBDIR=%{_datadir}/%{name}
+rm -f config.sh
+make \
+	DESTDIR=%{buildroot} \
+	PREFIX=%{_prefix} \
+	LIBDIR=%{_datadir}/%{name} \
+	LATEXLIBDIR=%{_datadir}/texmf/tex/latex
 
 %install
 rm -rf %{buildroot}
 install -d -m 755 %{buildroot}%{_bindir}
 install -d -m 755 %{buildroot}%{_datadir}/%{name}
 install -d -m 755 %{buildroot}%{_datadir}/texmf/tex/latex/%{name}
-make \
-	DESTDIR=%{buildroot} \
-	PREFIX=%{_prefix} \
-	LIBDIR=%{_datadir}/%{name} \
-	LATEXLIBDIR=%{_datadir}/texmf/tex/latex \
-	install
+make install
 
 %clean
 rm -rf %{buildroot}
