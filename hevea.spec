@@ -15,7 +15,6 @@ Requires:           tetex
 Requires(post):     tetex
 Requires(postun):   tetex
 BuildRequires:	    ocaml >= 3.07
-BuildRoot:          %{_tmppath}/%{name}-%{version}
 
 %description
 HEVEA is a LaTeX to HTML translator.  The input language is a fairly 
