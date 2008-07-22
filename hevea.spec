@@ -1,6 +1,6 @@
 %define name hevea 
 %define version 1.10
-%define release %mkrel 1
+%define release %mkrel 3
 
 Name: 		%{name}
 Version: 	%{version}
