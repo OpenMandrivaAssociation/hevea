@@ -1,0 +1,2 @@
+# we need .hva files even if empty
+addFilter("E: zero-length")
