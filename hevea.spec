@@ -4,7 +4,7 @@
 Summary:	A fast LaTeX to HTML translator
 Name:		hevea
 Version:	2.09
-Release:	2
+Release:	3
 License:	QPL
 Group:		Publishing
 Url:		http://hevea.inria.fr/
@@ -29,7 +29,7 @@ copyright 1995--1999 INRIA.
 %doc %{name}-%{version}-manual/*
 %{_bindir}/*
 %{_datadir}/%{name}
-%{_datadir}/texmf/tex/latex/%{name}.sty
+%{_datadir}/texmf-dist/tex/latex/%{name}.sty
 
 %post
 %{_bindir}/mktexlsr
@@ -48,15 +48,15 @@ make \
         DESTDIR=%{buildroot} \
         PREFIX=%{_prefix} \
         LIBDIR=%{_datadir}/%{name} \
-        LATEXLIBDIR=%{_datadir}/texmf/tex/latex
+        LATEXLIBDIR=%{_datadir}/texmf-dist/tex/latex
 
 %install
 install -d -m 755 %{buildroot}%{_bindir}
 install -d -m 755 %{buildroot}%{_datadir}/%{name}
-install -d -m 755 %{buildroot}%{_datadir}/texmf/tex/latex/%{name}
+install -d -m 755 %{buildroot}%{_datadir}/texmf-dist/tex/latex/%{name}
 make install \
         DESTDIR=%{buildroot} \
         PREFIX=%{_prefix} \
         LIBDIR=%{_datadir}/%{name} \
-        LATEXLIBDIR=%{_datadir}/texmf/tex/latex
+        LATEXLIBDIR=%{_datadir}/texmf-dist/tex/latex
 
