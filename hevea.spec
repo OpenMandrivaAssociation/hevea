@@ -4,7 +4,7 @@
 Summary:	A fast LaTeX to HTML translator
 Name:		hevea
 Version:	2.09
-Release:	3
+Release:	4
 License:	QPL
 Group:		Publishing
 Url:		http://hevea.inria.fr/
