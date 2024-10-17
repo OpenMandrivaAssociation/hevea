@@ -7,7 +7,7 @@ Version:	2.09
 Release:	4
 License:	QPL
 Group:		Publishing
-Url:		http://hevea.inria.fr/
+Url:		https://hevea.inria.fr/
 Source0:	http://para.inria.fr/~maranget/hevea/distri/hevea-%{version}.tar.gz
 Source1:	http://para.inria.fr/~maranget/hevea/distri/hevea-%{version}-manual.tar.gz
 Source100:	%{name}.rpmlintrc
